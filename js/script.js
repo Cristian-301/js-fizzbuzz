@@ -5,19 +5,21 @@
 
 
 for ( var i = 1; i < 101; i++) {
-  console.log(i)
+  // console.log(i)
 
 
-  document.getElementById("numeri").innerHTML += i + ", ";
   if (i % 3 == 0 && i % 5 == 0) {
-    console.log( "FizzBuzz");
-    document.getElementById("numeri").innerHTML +=  " FizzBuzz, ";
+    console.log(  "FizzBuzz");
+    document.getElementById("numeri").innerHTML +=  '<li class="green">' + " FizzBuzz " + "</li>";
   } else if (i % 5 == 0) {
     console.log("Buzz");
-    document.getElementById("numeri").innerHTML +=  " Buzz, ";
+    document.getElementById("numeri").innerHTML += '<li class="blue">' + " Buzz " + "</li>";
   } else if (i % 3 == 0) {
     console.log("Fizz");
-    document.getElementById("numeri").innerHTML +=  " Fizz, ";
+    document.getElementById("numeri").innerHTML += '<li class="yellow">' + "Fizz" + "</li>";
+  } else {
+    console.log(i)
+    document.getElementById("numeri").innerHTML += "<li>" + i + "</li>";
   }
 
 }
